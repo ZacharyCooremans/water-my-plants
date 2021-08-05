@@ -33,13 +33,13 @@ const initialState = {
 const AddPlant = (props) => {
   const { push } = useHistory();
   const [formValues, setFormValues] = useState(initialState);
-  const [disabled, setDisabled] = useState(true);
+  // const [disabled, setDisabled] = useState(true);
 
   const handleCancel = (e) => {
     e.preventDefault();
     setFormValues(initialState);
     push('/plants');
-    setDisabled(true);
+    // setDisabled(true);
   };
 
   const handleSubmit = (e) => {
@@ -54,7 +54,7 @@ const AddPlant = (props) => {
       .catch(err => console.log(err.response))
 
     setFormValues(initialState);
-    setDisabled(true);
+    // setDisabled(true);
   };
 
   const handleChange = event => {
@@ -62,7 +62,7 @@ const AddPlant = (props) => {
       ...formValues, 
       [event.target.name]: event.target.value
     })
-    setDisabled(false);
+    // setDisabled(false);
   };
 
   return (

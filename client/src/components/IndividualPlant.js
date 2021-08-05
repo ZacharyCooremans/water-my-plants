@@ -91,7 +91,7 @@ const IndividualPlant = (props) => {
       .get(`/api/users/${localStorage.getItem("user")}/plants/${plantId}`)
       .then((res) => setPlant(res.data[0]))
       .catch((err) => console.log(err.response));
-  }, []);
+  }, [plantId]);
 
   const handleDelete = (e) => {
     e.preventDefault();

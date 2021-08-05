@@ -8,9 +8,9 @@ const PlantForm = (props) => {
     const {push} = useHistory();
 
     const [plant, setPlant] = useState({
-      species: "",
-      nickname: "",
-      water_frequency: "",  
+        species: "",
+        nickname: "",
+        water_frequency: "",  
     })
 
     const { plantId } = useParams()
@@ -31,7 +31,7 @@ const PlantForm = (props) => {
         .catch((err)=>{
             console.log(err)
         })
-    }, [])
+    }, [plantId, plant, userID])
 
     const handleChange = (e) => {
         setPlant({
